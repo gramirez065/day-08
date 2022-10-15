@@ -1,6 +1,32 @@
+* {
+box-sizing: border-box;
+}
+/*create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /*should be removed. only for demonstration */
+}
+
+/*clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column{ 
+    width: 100%;
+  }
+}
 .heading {
-    background-color: aquamarine;
+
+    background-color: rgb(255, 136, 127);
     width: 600px;
+    float: center;
     padding: 30px;
     border: 2px;
     border-style: solid;
